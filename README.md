@@ -1,2 +1,11 @@
-# acq
-Some Scripts &amp; Ressources around Angular &amp; Celerio Quickstart
+Vorgehen:
+
++ Shift-Delete /celerio-angular-quickstart
++ Extract celerio-angular-quickstart.7z > /celerio-angular-quickstart
++ setup1*.cmd
++ setup2*.cmd
++ setup3*.cmd
+
+----
+startBackend
+startFrontend
