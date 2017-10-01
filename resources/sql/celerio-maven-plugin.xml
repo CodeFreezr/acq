@@ -40,6 +40,11 @@
     <!-- CHANGE IT OR COMMENT IT IF YOU USE YOUR OWN DATABASE -->
 
     <entityConfigs>
+        <entityConfig tableName="ENVIRONMENT">
+            <columnConfigs>
+                <columnConfig columnName="TYPE" sharedEnumName="EnvironmentType"/>
+            </columnConfigs>
+        </entityConfig>
 
         <entityConfig tableName="USER">
             <columnConfigs>
@@ -95,6 +100,22 @@
     <!-- CHANGE IT OR COMMENT IT IF YOU USE YOUR OWN DATABASE -->
     <!-- Generate enums used by the entities above -->
     <sharedEnumConfigs>
+        <sharedEnumConfig name="EnvironmentType" type="STRING">
+            <enumValues>
+                <enumValue value="BareMetal"><labels><label value="Bare Metal"/></labels></enumValue>
+                <enumValue value="AwsAmi"><labels><label value="AWS AMI"/></labels></enumValue>
+                <enumValue value="Docker"><labels><label value="Docker"/></labels></enumValue>
+                <enumValue value="VM"><labels><label value="VM"/></labels></enumValue>
+            </enumValues>
+        </sharedEnumConfig>
+        <sharedEnumConfig name="PackageType" type="STRING">
+            <enumValues>
+                <enumValue value="NPM"></enumValue>
+                <enumValue value="RPM"></enumValue>
+                <enumValue value="JAR"></enumValue>
+                <enumValue value="ZIP"></enumValue>
+            </enumValues>
+        </sharedEnumConfig>
         <sharedEnumConfig name="Civility" type="STRING">
             <enumValues>
                 <enumValue value="MR">
