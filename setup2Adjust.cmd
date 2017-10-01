@@ -5,5 +5,5 @@ rem ****************************************************************************
 rem change port to 8181 in /quickstart/web/proxy.conf.json
 rem change port to 8181 in /quickstart/src/main/resources/application.yml
 rem *************************************** 
-type resources\custom.xml
+type resources\PostCustomizing.xml
 rem *************************************** 
