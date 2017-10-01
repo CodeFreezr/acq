@@ -37,14 +37,54 @@
     </configuration>
 
 
-    <!-- CHANGE IT OR COMMENT IT IF YOU USE YOUR OWN DATABASE -->
+
 
     <entityConfigs>
+
+
+    <!-- KRMA Types -->
         <entityConfig tableName="ENVIRONMENT">
             <columnConfigs>
                 <columnConfig columnName="TYPE" sharedEnumName="EnvironmentType"/>
             </columnConfigs>
         </entityConfig>
+        <entityConfig tableName="PACKAGE">
+            <columnConfigs>
+                <columnConfig columnName="TYPE" sharedEnumName="PackageType"/>
+            </columnConfigs>
+        </entityConfig>
+        <entityConfig tableName="DEPLOYMENT">
+            <columnConfigs>
+                <columnConfig columnName="TYPE" sharedEnumName="DeploymentType"/>
+            </columnConfigs>
+        </entityConfig>
+        <entityConfig tableName="COMPONENT">
+            <columnConfigs>
+                <columnConfig columnName="TYPE" sharedEnumName="ComponentType"/>
+            </columnConfigs>
+        </entityConfig>
+        <entityConfig tableName="RELEASE">
+            <columnConfigs>
+                <columnConfig columnName="NAME" min="2" searchResult="true" displayOrder="1"/>
+                <columnConfig columnName="TYPE" sharedEnumName="ReleaseType" displayOrder="3"/>
+                <columnConfig columnName="STATE" sharedEnumName="ReleaseState" displayOrder="4"/>
+            </columnConfigs>
+        </entityConfig>
+        <entityConfig tableName="NOTE">
+            <columnConfigs>
+                <columnConfig columnName="NAME" min="2" searchResult="true" displayOrder="1"/>
+                  <columnConfig columnName="release_id">
+                    <!-- will generate the one to many association on the Author side -->
+                    <oneToManyConfig elementVar="release" var="release" orphanRemoval="true"/>
+                  </columnConfig>
+                  <columnConfig columnName="component_id">
+                    <!-- will generate the one to many association on the Author side -->
+                    <oneToManyConfig elementVar="component" var="component" orphanRemoval="true"/>
+                  </columnConfig>
+                <columnConfig columnName="DESCRIPTION" displayOrder="4"/>
+            </columnConfigs>
+        </entityConfig>
+
 
         <entityConfig tableName="USER">
             <columnConfigs>
@@ -100,6 +140,24 @@
     <!-- CHANGE IT OR COMMENT IT IF YOU USE YOUR OWN DATABASE -->
     <!-- Generate enums used by the entities above -->
     <sharedEnumConfigs>
+        <sharedEnumConfig name="ReleaseState" type="STRING">
+            <enumValues>
+                <enumValue value="Created"><labels><label value="Release angelegt"/></labels></enumValue>
+                <enumValue value="Assigned"><labels><label value="Release Pakete zugeordnet"/></labels></enumValue>
+                <enumValue value="Checked"><labels><label value="Release Audition abgeschlossen"/></labels></enumValue>
+                <enumValue value="Approved"><labels><label value="Release genehmigt"/></labels></enumValue>
+                <enumValue value="Delivered"><labels><label value="Release ausgeliefert"/></labels></enumValue>
+                <enumValue value="Live"><labels><label value="Release getestet"/></labels></enumValue>
+                <enumValue value="Postponed"><labels><label value="Release verschoben"/></labels></enumValue>
+            </enumValues>
+        </sharedEnumConfig>
+        <sharedEnumConfig name="ReleaseType" type="STRING">
+            <enumValues>
+                <enumValue value="Hotfix"><labels><label value="Notfall Hotfix"/></labels></enumValue>
+                <enumValue value="Release"><labels><label value="Geplante Lieferung"/></labels></enumValue>
+                <enumValue value="Maintenance"><labels><label value="Wartungs-Lieferung"/></labels></enumValue>
+            </enumValues>
+        </sharedEnumConfig>
         <sharedEnumConfig name="EnvironmentType" type="STRING">
             <enumValues>
                 <enumValue value="BareMetal"><labels><label value="Bare Metal"/></labels></enumValue>
@@ -110,12 +168,28 @@
         </sharedEnumConfig>
         <sharedEnumConfig name="PackageType" type="STRING">
             <enumValues>
-                <enumValue value="NPM"></enumValue>
-                <enumValue value="RPM"></enumValue>
-                <enumValue value="JAR"></enumValue>
-                <enumValue value="ZIP"></enumValue>
+                <enumValue value="NPM"><labels><label value="NPM"/></labels></enumValue>
+                <enumValue value="RPM"><labels><label value="RPM"/></labels></enumValue>
+                <enumValue value="JAR"><labels><label value="JAR"/></labels></enumValue>
+                <enumValue value="ZIP"><labels><label value="ZIP"/></labels></enumValue>
             </enumValues>
         </sharedEnumConfig>
+        <sharedEnumConfig name="DeploymentType" type="STRING">
+            <enumValues>
+                <enumValue value="NextJenkins"><labels><label value="Next Lab Jenkins"/></labels></enumValue>
+                <enumValue value="ForeignJenkins"><labels><label value="Foreign Jenkins"/></labels></enumValue>
+                <enumValue value="Manual"><labels><label value="Manuelle Installaion"/></labels></enumValue>
+            </enumValues>
+        </sharedEnumConfig>
+        <sharedEnumConfig name="ComponentType" type="STRING">
+            <enumValues>
+                <enumValue value="Application"><labels><label value="Application"/></labels></enumValue>
+                <enumValue value="Service"><labels><label value="Service"/></labels></enumValue>
+                <enumValue value="System"><labels><label value="System"/></labels></enumValue>
+            </enumValues>
+        </sharedEnumConfig>
+
+
         <sharedEnumConfig name="Civility" type="STRING">
             <enumValues>
                 <enumValue value="MR">
