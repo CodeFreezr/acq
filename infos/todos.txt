@@ -3,6 +3,7 @@ H2 beim beenden daten exportieren
 H2 Nach dem generieren (setup2) daten importieren
 Tooltips aus Kommentar-Spalte
 Startseite als Portal
+Gray Codes and Fonts in App
 Automate PK-Line Replacement
 Create Customisation Processor (read xml, process xml for eg. with antbuilder)
 Data: Components Complete Next,Team,App,Component,Service

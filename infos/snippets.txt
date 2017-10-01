@@ -7,6 +7,7 @@ root/manager
 Änderungen:
 
 CHECKS:
+SHORT should be NULL
 Approval-Checks hinzufügen
 Who: Wer führt den den Check durch, und wer nimmt diesen Check ab
 

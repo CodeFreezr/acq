@@ -59,7 +59,7 @@ DROP TABLE IF EXISTS `RELEASE_PACKAGE` CASCADE
 CREATE TABLE `CHECK`
 (
 	`ID` int not null IDENTITY,
-	`SHORT` VARCHAR(10) NOT NULL COMMENT 'Kurzbezeichner der Pruefregel.',
+	`SHORT` VARCHAR(10) NULL COMMENT 'Kurzbezeichner der Pruefregel.',
 	`NAME` VARCHAR(80) 	 NULL COMMENT 'Bezeichner der Pruefregel',
 	`QUESTION` VARCHAR(255) 	 NULL COMMENT 'Zentrale Fragestgellung fuer die Pruefung.',
 	`WHO` VARCHAR(255) 	 NULL COMMENT 'Wer fuehrt den Check durch, wer nimmt ihn ab.',

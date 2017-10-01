@@ -1,2 +1,2 @@
-RUNSCRIPT FROM 'load_checks.sql';
-RUNSCRIPT FROM 'load_components.sql';
+RUNSCRIPT FROM '../../resources/sql/load_checks.sql';
+RUNSCRIPT FROM '../../resources/sql/load_components.sql';
