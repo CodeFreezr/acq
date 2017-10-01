@@ -58,7 +58,7 @@ DROP TABLE IF EXISTS `RELEASE_PACKAGE` CASCADE
 
 CREATE TABLE `CHECK`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`SHORT` VARCHAR(10) NOT NULL COMMENT 'Kurzbezeichner der Pruefregel.',
 	`NAME` VARCHAR(80) 	 NULL COMMENT 'Bezeichner der Pruefregel',
 	`QUESTION` VARCHAR(255) 	 NULL COMMENT 'Zentrale Fragestgellung fuer die Pruefung.',
@@ -75,7 +75,7 @@ COMMENT='In dieser Tabelle werden alle Checkups fuer ein Release gespeichert.'
 
 CREATE TABLE `CHECK_RESULT`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`CHECK_ID` DECIMAL(10,0) 	 NULL,
 	`DEPLOYMENT_ID` DECIMAL(10,0) 	 NULL,
 	`RELEASE_ID` DECIMAL(10,0) 	 NULL,
@@ -90,7 +90,7 @@ COMMENT='Hier werden die Pruefergebnisse der Checkups gespeichert.'
 
 CREATE TABLE `COMPONENT`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`PARENT_ID` DECIMAL(10,0) 	 NULL COMMENT 'Uebergeordnete Komponente',
 	`SHORT` VARCHAR(8) 	 NULL COMMENT 'Kurzbezeichner',
 	`NAME` VARCHAR(80) NOT NULL,
@@ -105,7 +105,7 @@ COMMENT='Applikations-Komponenten werden von UE entwickelt und als Sourcecode in
 
 CREATE TABLE `CONFIGURATION`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`PARENT_ID` DECIMAL(10,0) 	 NULL COMMENT 'Uebergeordnetes Element.',
 	`COMPONENT_ID` DECIMAL(10,0) 	 NULL,
 	`ENVIRONMENT_ID` DECIMAL(10,0) 	 NULL,
@@ -121,7 +121,7 @@ CREATE TABLE `CONFIGURATION`
 
 CREATE TABLE `DEPENDENCY`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`PACKAGE_ID` DECIMAL(10,0) 	 NULL,
 	`TYPE` VARCHAR(30) 	 NULL COMMENT 'Definiert den Beziehungstyp zwischen Source und Target.',
 	CONSTRAINT `PK_Dependencies` PRIMARY KEY (`ID` ASC)
@@ -131,7 +131,7 @@ CREATE TABLE `DEPENDENCY`
 
 CREATE TABLE `DEPLOYMENT`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`RELEASE_ID` DECIMAL(10,0) 	 NULL COMMENT 'Relation zu einem Release',
 	`ENVIRONMENT_ID` DECIMAL(10,0) 	 NULL COMMENT 'Relation zu einer Umgebung',
 	`DUE` DATETIME 	 NULL COMMENT 'Zieltermin einer Lieferung',
@@ -145,7 +145,7 @@ COMMENT='Ein Deployment bringt ein Release auf eine Umgebung.'
 
 CREATE TABLE `EDIT`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`REF_ID` DECIMAL(10,0) 	 NULL COMMENT 'Zeile in einer anderen Tabelle (REF_ENTITY).',
 	`REF_ENTITY` VARCHAR(50) 	 NULL COMMENT 'Auf welche Tabelle bezieht sich die REF_ID.',
 	`FIRST_EDIT` DATETIME(6) 	 NULL COMMENT 'Wann wurde der Datensatz erstmalig angelegt.',
@@ -160,7 +160,7 @@ COMMENT='Eine minimale Historien-Verwaltung der Datensaetze. Die Relationen werd
 
 CREATE TABLE `EDITOR`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`NAME` VARCHAR(8) 	 NULL,
 	`SURNAME` VARCHAR(255) 	 NULL,
 	`EMAIL` VARCHAR(255) 	 NULL,
@@ -173,7 +173,7 @@ COMMENT='Basis-Tabelle fuer ein User-Management. Wird weiterhin ueber das Jaxio 
 
 CREATE TABLE `ENVIRONMENT`
 (
-	`ID`                       int not null IDENTITY,
+	`ID` int not null IDENTITY,
 	`SHORT` VARCHAR(8) NOT NULL COMMENT 'Kurzbezeichnung der Umgebung, z.b. EU, IEU, ITU, ABN, PRD, ...',
 	`NAME` VARCHAR(80) NOT NULL COMMENT 'Ausfuehrliche Bezeichnung z.b. Integrierte Testumgebung.',
 	`STATE` VARCHAR(30) 	 NULL COMMENT 'Status der Umgebung: active, inactive',
@@ -186,7 +186,7 @@ COMMENT='Eine Umgebung stellt eine logische Einheit fuer einen bestimmten Zweck 
 
 CREATE TABLE `HYPERLINK`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`REF_ID` DECIMAL(10,0) 	 NULL COMMENT 'Referenz fuer diesen Hyperlink',
 	`REF_ENTITY` VARCHAR(50) 	 NULL COMMENT 'Auf welche Entitaet (z.b. Environments, Deployments) bezieht sich die Ref_ID',
 	`TITLE` VARCHAR(80) 	 NULL COMMENT 'Titel der angezeigt wird.',
@@ -200,7 +200,7 @@ COMMENT='Hiermit koennen beliebig viele Hyperlinks an jeder beliebigen Zeile in 
 
 CREATE TABLE `NOTE`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`RELEASE_ID` DECIMAL(10,0) 	 NULL,
 	`COMPONENT_ID` DECIMAL(10,0) 	 NULL,
 	`ARTEFACT_NAME` VARCHAR(80) 	 NULL,
@@ -215,7 +215,7 @@ COMMENT='Master Entitaet fuer eine Relese Note'
 
 CREATE TABLE `NOTE_ENTRY`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`NOTE_ID` DECIMAL(10,0) NOT NULL,
 	`DESCRIPTION` VARCHAR(2000) 	 NULL,
 	`TICKET` VARCHAR(80) 	 NULL,
@@ -227,7 +227,7 @@ CREATE TABLE `NOTE_ENTRY`
 
 CREATE TABLE `PACKAGE`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`COMPONENT_ID` DECIMAL(10,0) 	 NULL,
 	`VERSION` VARCHAR(30) NOT NULL COMMENT 'Die Package Version wird aus der Component-Version plus Jenkins Build-ID zusammengesetzt.',
 	`PATH` VARCHAR(255) 	 NULL COMMENT 'Artifactory Path',
@@ -240,7 +240,7 @@ COMMENT='Packete werden ueber eine CI Pipeline erzeugt und in Artifactory gespei
 
 CREATE TABLE `RELEASE`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`NAME` VARCHAR(80) NOT NULL,
 	`STATE` VARCHAR(30) 	 NULL COMMENT 'Status eines Release, z.b. Created, Assigned, Checked, Approved, Delivered, Live, Postponed, ...',
 	`TYPE` VARCHAR(30) 	 NULL COMMENT 'Hotfix, Release',
@@ -252,7 +252,7 @@ COMMENT='Ein Release wird im Laufe eines PI in einem ART auf eine Umgebung gebra
 
 CREATE TABLE `RELEASE_PACKAGE`
 (
-	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',
+	`ID` int not null IDENTITY,
 	`PACKAGE_ID` DECIMAL(10,0) 	 NULL,
 	`RELEASE_ID` DECIMAL(10,0) 	 NULL,
 	`STATE` VARCHAR(30) 	 NULL COMMENT 'Status eines ReleasePackage, z.b.: Assigned, Deployed, Retired',

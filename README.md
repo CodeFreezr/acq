@@ -7,5 +7,5 @@ Vorgehen:
 
 
 ----
-startBackend
-startFrontend
++ startBackend (eigener Prozess)
++ startFrontend (Port: 4445)

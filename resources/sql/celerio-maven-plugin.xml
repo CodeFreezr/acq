@@ -72,16 +72,14 @@
         </entityConfig>
         <entityConfig tableName="NOTE">
             <columnConfigs>
-                <columnConfig columnName="NAME" min="2" searchResult="true" displayOrder="1"/>
                   <columnConfig columnName="release_id">
                     <!-- will generate the one to many association on the Author side -->
-                    <oneToManyConfig elementVar="release" var="release" orphanRemoval="true"/>
+                    <oneToManyConfig elementVar="note" var="note" orphanRemoval="true"/>
                   </columnConfig>
                   <columnConfig columnName="component_id">
                     <!-- will generate the one to many association on the Author side -->
-                    <oneToManyConfig elementVar="component" var="component" orphanRemoval="true"/>
+                    <oneToManyConfig elementVar="note" var="note" orphanRemoval="true"/>
                   </columnConfig>
-                <columnConfig columnName="DESCRIPTION" displayOrder="4"/>
             </columnConfigs>
         </entityConfig>
 

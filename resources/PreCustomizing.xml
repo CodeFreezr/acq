@@ -1,0 +1,6 @@
+<sets>
+    <set file="sql\KRMA.SQL">
+        <replace>	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',</replace>
+        <with>	`ID` int not null IDENTITY,</with>
+    </set>
+</sets>   

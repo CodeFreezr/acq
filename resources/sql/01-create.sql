@@ -168,5 +168,8 @@ INSERT INTO BOOK(id, title, summary, author_id, publication_date, best_seller, p
 
 INSERT INTO PROJECT(id, name, url, author_id, open_source) VALUES (-1, 'PrimeNG', 'http://www.primefaces.org/primeng/', -1, true);
 
+--Setuo KRMA Entities:
+RUNSCRIPT FROM '../../resources/sql/KRMA.sql';
 
-RUNSCRIPT FROM '../../resources/sql/KRMA.sql'
+--Initial Data Load for KRMA:
+RUNSCRIPT FROM '../../resources/sql/loader.sql';
