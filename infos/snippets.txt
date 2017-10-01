@@ -1,0 +1,46 @@
+Änderungen:
+
+Kommentar zur Komponente
+
+DEPENDENCY:
+`TYPE` VARCHAR(50) >> `TYPE` VARCHAR(30)
+
+EDIT:
+Typo in Kommentaer
+
+NOTE:
+Artefact > NULL, da eine ReleaseNote ja auch für eine GesamtRelease angelegt werden kann.
+NOTE > Description ändern
+
+PACKACGE:
+TYPE fehlt: JAR, RPM, NPM, ....
+
+CHECKS:
+Approval-Checks hinzufügen
+Who: Wer führt den den Check durch, und wer nimmt diesen Check ab
+
+setup2Backend:
+[INFO] Var name clash resolution for Note: note => note2
+
+[ERROR] Failed to execute:
+
+ RUNSCRIPT FROM '../../resources/KRMA.sql'
+
+[ERROR] org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "
+
+ALTER TABLE ""NOTE""
+ ADD CONSTRAINT ""PK_NOTES""
+        FOREIGN KEY (""ID"") REFERENCES  ()[*] ON DELETE NO ACTION ON UPDATE NO ACTION
+ "; erwartet "identifier"
+Syntax error in SQL statement "
+
+ALTER TABLE ""NOTE""
+ ADD CONSTRAINT ""PK_NOTES""
+        FOREIGN KEY (""ID"") REFERENCES  ()[*] ON DELETE NO ACTION ON UPDATE NO ACTION
+ "; expected "identifier"; SQL statement:
+
+
+ALTER TABLE `NOTE`
+ ADD CONSTRAINT `PK_Notes`
+        FOREIGN KEY (`ID`) REFERENCES  () ON DELETE No Action ON UPDATE No Action
+ [42001-187]
