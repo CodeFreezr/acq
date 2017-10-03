@@ -2,7 +2,7 @@
 
 
 
-KRMA = [K]onfiguration- & [R]elease[M]anagment [A]utomatisierung
+## KRMA = [K]onfigurations- & [R]elease-[M]anagment [A]utomatisierung
 
 ### KRMA: Eine Initiative mit 5 Kernzielen: .
  1. ReleaseBuilder & Package Cockpit mittels Jenkins Orchestrierung
