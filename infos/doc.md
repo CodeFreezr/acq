@@ -34,7 +34,7 @@
 ### NeXt Steps:
   - [ ] Jirafizierung aller Aufgaben (Epic / Feature vs. Tag-Management)
   - [ ] RM_Web an DB
-  - [ ] Harmonisierung der Jenkins Jobs
+  - [ ] Harmonisierung der Jenkins Job- und Projektnamen
   - [ ] ReleaseBuilder Big Buzzer: One Button Delivery on ITU
   - [ ] Package Cockpit für Release Dokumentation
   - [ ] Datenbewirtschaftung für Stammdaten läuft
