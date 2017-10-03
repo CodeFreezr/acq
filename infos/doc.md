@@ -4,7 +4,7 @@
 
 ## KRMA = [K]onfigurations- & [R]elease-[M]anagment [A]utomatisierung
 
-### KRMA: Eine Initiative mit 5 Kernzielen: .
+### KRMA: Eine Initiative mit 5 Kernzielen: 
  1. ReleaseBuilder & Package Cockpit mittels Jenkins Orchestrierung
  2. KMDB & DevOps Repository u.a. für Applikations-, Service- & Systemkomponenten
  3. Stammdaten-Support für autom. Provisionierung, Zwei-Phasen Token Replacement & mehr
