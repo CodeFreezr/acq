@@ -18,7 +18,9 @@ import { MessageService} from './service/message.service';
         <p-growl [value]="msgs"></p-growl>
 
         <div class="ui-g layout">
-            <div class="ui-g-12 ui-md-1">The West...</div>
+            <div class="ui-g-12 ui-md-1">
+                     <img src="/img/db_em_rgb_100px.svg" width="auto" height="70px"/>
+            </div>
             <div class="ui-g-12 ui-md-11 ui-g-nopad">
                 <div class="ui-g-12 ui-g-nopad" style="font-size: 14px;">
                     <p-menubar [model]="items"></p-menubar>
@@ -27,8 +29,10 @@ import { MessageService} from './service/message.service';
                     <router-outlet></router-outlet>
                 </div>
                 <div class="ui-g-12" style="text-align: center;">
+<!--                
                     <i class="fa fa-twitter"></i> <a href="https://twitter.com/jaxiosoft">@jaxiosoft</a> -
                     <i class="fa fa-github-alt"></i> <a href="https://github.com/jaxio/celerio-angular-quickstart">https://github.com/jaxio/celerio-angular-quickstart</a>
+-->
                 </div>
             </div>
         </div>
@@ -94,12 +98,12 @@ export class AppComponent implements OnInit {
 
             { label: 'Entities', icon: 'fa-search', items: [
 #foreach($entity in $project.withoutManyToManyJoinEntities.list)
-                    {label: '${entity.model.type} Search', routerLink: ['/${entity.model.var}-list']},
-                    {label: '${entity.model.type} Create', routerLink: ['/${entity.model.var}/new']}#if($velocityHasNext),
+                    {label: '${entity.model.type}', routerLink: ['/${entity.model.var}-list']}#if($velocityHasNext),
 #end
 #end
                 ]
             },
+            { label: 'Stack', routerLink: ['stack'], icon: 'fa-share-alt' },
             { label: 'Swagger', url : "/swagger-ui.html", icon: 'fa-gear' },
             { label: 'Documentation',
                 icon: 'fa-book',

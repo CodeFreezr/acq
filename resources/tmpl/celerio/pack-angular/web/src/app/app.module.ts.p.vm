@@ -26,6 +26,9 @@ import { ${entity.model.type}LineComponent } from './entities/$entity.model.var/
 import { ${entity.model.type}CompleteComponent } from './entities/$entity.model.var/${entity.model.var}-auto-complete.component';
 #end
 
+//Custom KRMA Components
+import { StackComponent } from './stack/stack.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +42,8 @@ import { ${entity.model.type}CompleteComponent } from './entities/$entity.model.
     ${entity.model.type}LineComponent,
     ${entity.model.type}CompleteComponent
 #end
+    ,
+    StackComponent
     ],
     imports: [
 // angular

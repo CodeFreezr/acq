@@ -3,6 +3,7 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home.component';
+import { StackComponent } from './stack/stack.component';
 #foreach($entity in $project.withoutManyToManyJoinEntities.list)
 
 import { ${entity.model.type}ListComponent } from './entities/$entity.model.var/${entity.model.var}-list.component';
@@ -11,6 +12,8 @@ import { ${entity.model.type}DetailComponent } from './entities/$entity.model.va
 
 export const routes: Routes = [
     { path : '',  component: HomeComponent }
+    ,
+    { path : 'stack',  component: StackComponent }
 #foreach($entity in $project.withoutManyToManyJoinEntities.list)
     ,
     {path: '${entity.model.var}-list', component: ${entity.model.type}ListComponent },

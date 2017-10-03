@@ -8,6 +8,7 @@
 
 @import '~font-awesome/css/font-awesome.css';
 
+body {font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif}
 
 button.ui-button.ui-state-default {
     background: #f2f2f2;
