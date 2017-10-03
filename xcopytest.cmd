@@ -1,0 +1,1 @@
+xcopy resources\tmpl celerio-angular-quickstart\pack-angular /S /Y /D
