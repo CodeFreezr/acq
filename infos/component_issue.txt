@@ -1,0 +1,214 @@
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-detail.component.ts (11,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-detail.component.ts (20,9): Duplicate identifier 'Component'.
+J
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-detail.component.ts (55,9): Type 'Component' is not assignable to type 'Compon
+ent'. Two different types with this name exist, but they are unrelated.
+  Property 'id' is missing in type 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-line.component.ts (11,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-line.component.ts (12,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-list.component.ts (11,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-list.component.ts (27,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-list.component.ts (143,37): Supplied parameters do not match any signature of
+call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-list.component.ts (144,59): Property 'id' does not exist on type 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (11,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (15,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (33,29): Supplied parameters do not match any signature
+of call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (34,27): Property 'parent' does not exist on type 'Compo
+nent'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (58,37): Supplied parameters do not match any signature
+of call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (77,66): Property 'parent' does not exist on type 'Compo
+nent'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (81,27): Property 'parent' does not exist on type 'Compo
+nent'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (85,38): Argument of type 'Component' is not assignable
+to parameter of type 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (11,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (18,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (43,27): Supplied parameters do not match any signature of
+ call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (80,39): Argument of type 'Component' is not assignable to
+ parameter of type 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (96,24): Supplied parameters do not match any signature of
+ call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (97,22): Property 'parent' does not exist on type 'Compone
+nt'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (97,31): Supplied parameters do not match any signature of
+ call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (98,22): Property 'parent' does not exist on type 'Compone
+nt'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (98,47): Property 'id' does not exist on type 'Component'.
+
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (127,40): Property 'id' does not exist on type 'Component'
+.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-detail.component.ts (11,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-detail.component.ts (17,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-detail.component.ts (41,9): Type 'Component' is not assignable to type 'Co
+mponent'. Two different types with this name exist, but they are unrelated.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-list.component.ts (11,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-list.component.ts (22,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-list.component.ts (115,37): Supplied parameters do not match any signature
+ of call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-list.component.ts (116,59): Property 'id' does not exist on type 'Componen
+t'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-detail.component.ts (11,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-detail.component.ts (18,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-detail.component.ts (41,9): Type 'Component' is not assignable to type 'Component'. Two diff
+erent types with this name exist, but they are unrelated.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-list.component.ts (11,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-list.component.ts (23,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-list.component.ts (113,37): Supplied parameters do not match any signature of call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-list.component.ts (114,59): Property 'id' does not exist on type 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-auto-complete.component.ts (11,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-auto-complete.component.ts (15,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-detail.component.ts (11,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-detail.component.ts (20,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-detail.component.ts (55,9): Type 'Component' is not assignable to type 'Compon
+ent'. Two different types with this name exist, but they are unrelated.
+  Property 'id' is missing in type 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-list.component.ts (11,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-list.component.ts (27,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-list.component.ts (143,37): Supplied parameters do not match any signature of
+call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/checkResult/checkResult-list.component.ts (144,59): Property 'id' does not exist on type 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (11,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (18,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (43,27): Supplied parameters do not match any signature of
+ call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (80,39): Argument of type 'Component' is not assignable to
+ parameter of type 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (96,24): Supplied parameters do not match any signature of
+ call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (97,22): Property 'parent' does not exist on type 'Compone
+nt'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (97,31): Supplied parameters do not match any signature of
+ call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (98,22): Property 'parent' does not exist on type 'Compone
+nt'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (98,47): Property 'id' does not exist on type 'Component'.
+
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-list.component.ts (127,40): Property 'id' does not exist on type 'Component'
+.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (11,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (15,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (33,29): Supplied parameters do not match any signature
+of call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (34,27): Property 'parent' does not exist on type 'Compo
+nent'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (58,37): Supplied parameters do not match any signature
+of call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (77,66): Property 'parent' does not exist on type 'Compo
+nent'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (81,27): Property 'parent' does not exist on type 'Compo
+nent'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-detail.component.ts (85,38): Argument of type 'Component' is not assignable
+to parameter of type 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-line.component.ts (11,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-line.component.ts (12,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-auto-complete.component.ts (11,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/my_Component/my_Component-auto-complete.component.ts (15,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-list.component.ts (11,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-list.component.ts (22,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-list.component.ts (115,37): Supplied parameters do not match any signature
+ of call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-list.component.ts (116,59): Property 'id' does not exist on type 'Componen
+t'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-detail.component.ts (11,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-detail.component.ts (17,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/configuration/configuration-detail.component.ts (41,9): Type 'Component' is not assignable to type 'Co
+mponent'. Two different types with this name exist, but they are unrelated.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-list.component.ts (11,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-list.component.ts (23,10): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-list.component.ts (113,37): Supplied parameters do not match any signature of call target.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-list.component.ts (114,59): Property 'id' does not exist on type 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-detail.component.ts (11,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-detail.component.ts (18,9): Duplicate identifier 'Component'.
+
+ERROR in D:/acq/celerio-angular-quickstart/quickstart/web/src/app/entities/note/note-detail.component.ts (41,9): Type 'Component' is not assignable to type 'Component'. Two diff
+erent types with this name exist, but they are unrelated.
+webpack: Failed to compile.

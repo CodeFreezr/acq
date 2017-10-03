@@ -7,5 +7,9 @@ Gray Codes and Fonts in App
 Automate PK-Line Replacement
 Create Customisation Processor (read xml, process xml for eg. with antbuilder)
 Data: Components Complete Next,Team,App,Component,Service
+Data: nxComponent, nxPackage, 
+Add Technology-Stack: Velocity, Nodes, Maven, Webpack, SQL-Database 
+
+Try Electron
 
 

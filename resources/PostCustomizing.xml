@@ -1,5 +1,5 @@
 <sets>
-    <set file="celerio-angular-quickstart\quickstart\web\src\app\app.component.ts">
+    <set file="..\celerio-angular-quickstart\quickstart\web\src\app\app.component.ts">
         <replace>
             <div class="ui-g-12 ui-md-1">The West...</div>
         </replace>
@@ -11,12 +11,25 @@
             </div>
         </with>
     </set>
-    <set file="celerio-angular-quickstart\quickstart\web\proxy.conf.json">
+    <set file="..\celerio-angular-quickstart\quickstart\web\proxy.conf.json">
         <replace>8080</replace>
         <with>8181</with>
     </set>
-    <set file="celerio-angular-quickstart\quickstart\src\main\resources\application.yml">
+    <set file="..\celerio-angular-quickstart\quickstart\src\main\resources\application.yml">
         <replace>8080</replace>
         <with>8181</with>
+    </set>
+
+    <set file="..\celerio-angular-quickstart\quickstart\web\src\app\app.component.ts">
+    <replace>
+@import '~font-awesome/css/font-awesome.css';
+    </replace>
+    <with>
+@import '~font-awesome/css/font-awesome.css';
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+    </with>
     </set>
 </sets>   

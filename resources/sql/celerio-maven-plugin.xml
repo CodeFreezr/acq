@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <celerio xmlns="http://www.jaxio.com/schema/celerio" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.jaxio.com/schema/celerio ./celerio.xsd">
-    <configuration rootPackage="com.mycompany.myapp" applicationName="sampleapp">
+
+
+    <configuration rootPackage="com.mycompany.myapp" applicationName="krmaPortal">
         <!-- Which tables are used for generation -->
         <tables>
             <!-- <table include="false" pattern="*_AUDIT"/> -->
@@ -38,52 +40,9 @@
 
 
 
+ 
 
     <entityConfigs>
-
-
-    <!-- KRMA Types -->
-        <entityConfig tableName="ENVIRONMENT">
-            <columnConfigs>
-                <columnConfig columnName="TYPE" sharedEnumName="EnvironmentType"/>
-            </columnConfigs>
-        </entityConfig>
-        <entityConfig tableName="PACKAGE">
-            <columnConfigs>
-                <columnConfig columnName="TYPE" sharedEnumName="PackageType"/>
-            </columnConfigs>
-        </entityConfig>
-        <entityConfig tableName="DEPLOYMENT">
-            <columnConfigs>
-                <columnConfig columnName="TYPE" sharedEnumName="DeploymentType"/>
-            </columnConfigs>
-        </entityConfig>
-        <entityConfig tableName="COMPONENT">
-            <columnConfigs>
-                <columnConfig columnName="TYPE" sharedEnumName="ComponentType"/>
-            </columnConfigs>
-        </entityConfig>
-        <entityConfig tableName="RELEASE">
-            <columnConfigs>
-                <columnConfig columnName="NAME" min="2" searchResult="true" displayOrder="1"/>
-                <columnConfig columnName="TYPE" sharedEnumName="ReleaseType" displayOrder="3"/>
-                <columnConfig columnName="STATE" sharedEnumName="ReleaseState" displayOrder="4"/>
-            </columnConfigs>
-        </entityConfig>
-        <entityConfig tableName="NOTE">
-            <columnConfigs>
-                  <columnConfig columnName="release_id">
-                    <!-- will generate the one to many association on the Author side -->
-                    <oneToManyConfig elementVar="note" var="note" orphanRemoval="true"/>
-                  </columnConfig>
-                  <columnConfig columnName="component_id">
-                    <!-- will generate the one to many association on the Author side -->
-                    <oneToManyConfig elementVar="note" var="note" orphanRemoval="true"/>
-                  </columnConfig>
-            </columnConfigs>
-        </entityConfig>
-
-
         <entityConfig tableName="USER">
             <columnConfigs>
                 <columnConfig columnName="civility" sharedEnumName="Civility"/>
@@ -133,29 +92,136 @@
                 </columnConfig>
             </columnConfigs>
         </entityConfig>
+
+     <!-- KRMA Entities -->
+
+
+
+        <entityConfig tableName="COMPONENT">
+            <columnConfigs>
+                <columnConfig columnName="TYPE" sharedEnumName="ComponentType"/>
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig tableName="DEPLOYMENT">
+            <columnConfigs>
+                <columnConfig columnName="TYPE" sharedEnumName="DeploymentType"/>
+                <columnConfig columnName="STATE" sharedEnumName="DeploymentState"/>
+                  <columnConfig columnName="release_id">
+                    <!-- will generate the one to many association on the Release side -->
+                    <oneToManyConfig elementVar="deployment" var="deployment" orphanRemoval="true"/>
+                  </columnConfig>
+                  <columnConfig columnName="environment_id">
+                    <!-- will generate the one to many association on the Environment side -->
+                    <oneToManyConfig elementVar="deployment" var="deployment" orphanRemoval="true"/>
+                  </columnConfig>
+
+                  <columnConfig columnName="id">
+                    <oneToManyConfig elementVar="hyperlink" var="hyperlink" orphanRemoval="true"/>
+                  </columnConfig> 
+
+            </columnConfigs>
+        </entityConfig>
+
+
+
+
+
+        <entityConfig tableName="ENVIRONMENT">
+            <columnConfigs>
+                  <columnConfig columnName="TYPE" sharedEnumName="EnvironmentType"/>
+
+                  <columnConfig columnName="id">
+                    <oneToManyConfig elementVar="hyperlink" var="hyperlink" orphanRemoval="true"/>
+                  </columnConfig> 
+
+            </columnConfigs>
+        </entityConfig>
+
+
+        <entityConfig tableName="HYPERLINK">
+            <columnConfigs>
+                  <columnConfig columnName="title" displayOrder="1"/>
+                  <columnConfig columnName="url" displayOrder="2"/>
+                  <columnConfig columnName="description" displayOrder="3"/>
+                  <columnConfig columnName="comp_id" searchField="false" displayOrder="4">
+                    <!-- will generate the one to many association on the Component side -->
+                    <oneToManyConfig elementVar="hyperlink" var="hyperlink" orphanRemoval="true"/>
+                  </columnConfig>
+                  <columnConfig columnName="env_id" searchField="false" displayOrder="5">
+                    <!-- will generate the one to many association on the Environment side -->
+                    <oneToManyConfig elementVar="hyperlink" var="hyperlink" orphanRemoval="true"/>
+                  </columnConfig>
+ 
+                  <columnConfig columnName="pack_id" searchField="false">
+                    <!-- will generate the one to many association on the Package side -->
+                    <oneToManyConfig elementVar="hyperlink" var="hyperlink" orphanRemoval="true"/>
+                  </columnConfig>
+                  <columnConfig columnName="rel_id" searchField="false">
+                    <!-- will generate the one to many association on the Release side -->
+                    <oneToManyConfig elementVar="hyperlink" var="hyperlink" orphanRemoval="true"/>
+                  </columnConfig>
+
+            </columnConfigs>
+        </entityConfig>
+
+
+        <entityConfig tableName="NOTE">
+            <columnConfigs>
+                  <columnConfig columnName="release_id">
+                    <!-- will generate the one to many association on the Release side -->
+                    <oneToManyConfig elementVar="note" var="note" orphanRemoval="true"/>
+                  </columnConfig>
+                  <columnConfig columnName="component_id">
+                    <!-- will generate the one to many association on the Component side -->
+                    <oneToManyConfig elementVar="note" var="note" orphanRemoval="true"/>
+                  </columnConfig>
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig tableName="PACKAGE" entityName="Package">
+            <columnConfigs>
+                <columnConfig columnName="TYPE" sharedEnumName="PackageType"/>
+            </columnConfigs>
+        </entityConfig>
+
+        <entityConfig tableName="RELEASE">
+            <columnConfigs>
+                <columnConfig columnName="NAME" min="2" searchResult="true" displayOrder="1"/>
+                <columnConfig columnName="TYPE" sharedEnumName="ReleaseType" displayOrder="3"/>
+                <columnConfig columnName="STATE" sharedEnumName="ReleaseState" displayOrder="4"/>
+            </columnConfigs>
+        </entityConfig>
+
     </entityConfigs>
 
     <!-- CHANGE IT OR COMMENT IT IF YOU USE YOUR OWN DATABASE -->
     <!-- Generate enums used by the entities above -->
     <sharedEnumConfigs>
-        <sharedEnumConfig name="ReleaseState" type="STRING">
+
+      <!-- KRMA Enums -->
+        <sharedEnumConfig name="ComponentType" type="STRING">
             <enumValues>
-                <enumValue value="Created"><labels><label value="Release angelegt"/></labels></enumValue>
-                <enumValue value="Assigned"><labels><label value="Release Pakete zugeordnet"/></labels></enumValue>
-                <enumValue value="Checked"><labels><label value="Release Audition abgeschlossen"/></labels></enumValue>
-                <enumValue value="Approved"><labels><label value="Release genehmigt"/></labels></enumValue>
-                <enumValue value="Delivered"><labels><label value="Release ausgeliefert"/></labels></enumValue>
-                <enumValue value="Live"><labels><label value="Release getestet"/></labels></enumValue>
-                <enumValue value="Postponed"><labels><label value="Release verschoben"/></labels></enumValue>
+                <enumValue value="Application"><labels><label value="Application"/></labels></enumValue>
+                <enumValue value="Service"><labels><label value="Service"/></labels></enumValue>
+                <enumValue value="System"><labels><label value="System"/></labels></enumValue>
             </enumValues>
         </sharedEnumConfig>
-        <sharedEnumConfig name="ReleaseType" type="STRING">
+        <sharedEnumConfig name="DeploymentState" type="STRING">
             <enumValues>
-                <enumValue value="Hotfix"><labels><label value="Notfall Hotfix"/></labels></enumValue>
-                <enumValue value="Release"><labels><label value="Geplante Lieferung"/></labels></enumValue>
-                <enumValue value="Maintenance"><labels><label value="Wartungs-Lieferung"/></labels></enumValue>
+                <enumValue value="planned"><labels><label value="Deployment eingeplant"/></labels></enumValue>
+                <enumValue value="started"><labels><label value="Deployment begonnen"/></labels></enumValue>
+                <enumValue value="finished"><labels><label value="Deployment erledigt"/></labels></enumValue>
+                <enumValue value="tested"><labels><label value="Deployment getestet"/></labels></enumValue>
             </enumValues>
-        </sharedEnumConfig>
+        </sharedEnumConfig>        
+        <sharedEnumConfig name="DeploymentType" type="STRING">
+            <enumValues>
+                <enumValue value="NextJenkins"><labels><label value="Next Lab Jenkins"/></labels></enumValue>
+                <enumValue value="ForeignJenkins"><labels><label value="Foreign Jenkins"/></labels></enumValue>
+                <enumValue value="Manual"><labels><label value="Manuelle Installation"/></labels></enumValue>
+            </enumValues>
+        </sharedEnumConfig>        
         <sharedEnumConfig name="EnvironmentType" type="STRING">
             <enumValues>
                 <enumValue value="BareMetal"><labels><label value="Bare Metal"/></labels></enumValue>
@@ -172,18 +238,22 @@
                 <enumValue value="ZIP"><labels><label value="ZIP"/></labels></enumValue>
             </enumValues>
         </sharedEnumConfig>
-        <sharedEnumConfig name="DeploymentType" type="STRING">
+        <sharedEnumConfig name="ReleaseState" type="STRING">
             <enumValues>
-                <enumValue value="NextJenkins"><labels><label value="Next Lab Jenkins"/></labels></enumValue>
-                <enumValue value="ForeignJenkins"><labels><label value="Foreign Jenkins"/></labels></enumValue>
-                <enumValue value="Manual"><labels><label value="Manuelle Installaion"/></labels></enumValue>
+                <enumValue value="Created"><labels><label value="Release angelegt"/></labels></enumValue>
+                <enumValue value="Assigned"><labels><label value="Release Pakete zugeordnet"/></labels></enumValue>
+                <enumValue value="Checked"><labels><label value="Release Audition abgeschlossen"/></labels></enumValue>
+                <enumValue value="Approved"><labels><label value="Release genehmigt"/></labels></enumValue>
+                <enumValue value="Delivered"><labels><label value="Release ausgeliefert"/></labels></enumValue>
+                <enumValue value="Live"><labels><label value="Release getestet"/></labels></enumValue>
+                <enumValue value="Postponed"><labels><label value="Release verschoben"/></labels></enumValue>
             </enumValues>
         </sharedEnumConfig>
-        <sharedEnumConfig name="ComponentType" type="STRING">
+        <sharedEnumConfig name="ReleaseType" type="STRING">
             <enumValues>
-                <enumValue value="Application"><labels><label value="Application"/></labels></enumValue>
-                <enumValue value="Service"><labels><label value="Service"/></labels></enumValue>
-                <enumValue value="System"><labels><label value="System"/></labels></enumValue>
+                <enumValue value="Hotfix"><labels><label value="Notfall Hotfix"/></labels></enumValue>
+                <enumValue value="Release"><labels><label value="Geplante Lieferung"/></labels></enumValue>
+                <enumValue value="Maintenance"><labels><label value="Wartungs-Lieferung"/></labels></enumValue>
             </enumValues>
         </sharedEnumConfig>
 

@@ -11,3 +11,9 @@ SHORT should be NULL
 Approval-Checks hinzufügen
 Who: Wer führt den den Check durch, und wer nimmt diesen Check ab
 
+
+
+-------------------------------------------------
+Good to know:
+Änderungen am maven plugin config können teilweise gemacht werden ohne Neu-Setup
+
