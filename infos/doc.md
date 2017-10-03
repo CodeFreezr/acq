@@ -8,12 +8,12 @@ Präsentieren:
 
 Karamdeep (-> Arbeiten und leuchten). Der Großonkel von Jenkins.
 
-- KRMA: Eine Initiative mit 5 Kernzielen:
-    1 ReleaseBuilder & Package Cockpit mittels Jenkins Orchestrierung
-    2 KMDB & DevOps Repository u.a. für Applikations-, Service- & Systemkomponenten
-    3 Stammdaten-Support für autom. Provisionierung, Zwei-Phasen Token Replacement & mehr
-    4 Strategisches Dependency-, Configuration- & ReleaseNote-Management
-    5 Tool Integration in einem neXt Lab DevOps Portal
+- KRMA: Eine Initiative mit 5 Kernzielen: .
+  1. ReleaseBuilder & Package Cockpit mittels Jenkins Orchestrierung
+  2. KMDB & DevOps Repository u.a. für Applikations-, Service- & Systemkomponenten
+  3. Stammdaten-Support für autom. Provisionierung, Zwei-Phasen Token Replacement & mehr
+  4. Strategisches Dependency-, Configuration- & ReleaseNote-Management
+  5. Tool Integration in einem neXt Lab DevOps Portal
 
 - KRMA Building Blocks:
     Komponenten: ReleaseManager Web App, ERM Nodel <> KMDB H2/MySQL, KRMA Portal
