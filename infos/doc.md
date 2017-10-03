@@ -32,16 +32,16 @@
   - [x] Package Cockpit Übersichten für 0.5.3 und 0.5.6 erzeugt
 
 ### NeXt Steps:
-  - [] Jirafizierung aller Aufgaben (Epic / Feature vs. Tag-Management)
-  - [] RM_Web an DB
-  - [] Harmonisierung der Jenkins Jobs
-  - [] ReleaseBuilder Big Buzzer: One Button Delivery on ITU
-  - [] Package Cockpit für Release Dokumentation
-  - [] Datenbewirtschaftung für Stammdaten läuft
-  - [] Schnittstellen ausbauen
-  - [] KRMA Portal Beta
-  - [] Planung Token-Replacement
-  - [] Jenkins Jobs für Build, Test, Deployment, Start/Stop einrichten
+  - [ ] Jirafizierung aller Aufgaben (Epic / Feature vs. Tag-Management)
+  - [ ] RM_Web an DB
+  - [ ] Harmonisierung der Jenkins Jobs
+  - [ ] ReleaseBuilder Big Buzzer: One Button Delivery on ITU
+  - [ ] Package Cockpit für Release Dokumentation
+  - [ ] Datenbewirtschaftung für Stammdaten läuft
+  - [ ] Schnittstellen ausbauen
+  - [ ] KRMA Portal Beta
+  - [ ] Planung Token-Replacement
+  - [ ] Jenkins Jobs für Build, Test, Deployment, Start/Stop einrichten
   
   
 Docu: EA ERM > EA DDL Export > Customize > Generate > StartBE > StartFE
