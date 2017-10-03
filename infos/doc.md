@@ -12,10 +12,10 @@
  5. Tool Integration in einem neXt Lab DevOps Portal
 
 ### KRMA Building Blocks:
-  - Komponenten: ReleaseManager Web App, ERM Nodel <> KMDB H2/MySQL, KRMA Portal
-  - Schnittstellen: Jenkins, Jira, TMT, Zabbix, Salt / Ansible, evt. Consul/Insight/Zookeeper
-  - Vorgehen: Fullstack Forward Engineered MDA
-  - Delivery Models: Docker, JAR, plain Node- / Spring-Threads
+  - **Komponenten:** ReleaseManager Web App, ERM Nodel <> KMDB H2/MySQL, KRMA Portal
+  - **Schnittstellen:** Jenkins, Jira, TMT, Zabbix, Salt / Ansible, evt. Consul/Insight/Zookeeper
+  - **Vorgehen:** Fullstack Forward Engineered MDA
+  - **Delivery Models:** Docker, JAR, plain Node- / Spring-Threads
 
 ### KRMA Stack:
   - NodeJS, NPM, Angular, TypeScript, Material, PrimeNG, Swagger, Webpack
