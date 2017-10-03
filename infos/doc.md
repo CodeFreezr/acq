@@ -17,7 +17,7 @@ Karamdeep (-> Arbeiten und leuchten). Der Großonkel von Jenkins.
 
 - KRMA Building Blocks:
     Komponenten: ReleaseManager Web App, ERM Nodel <> KMDB H2/MySQL, KRMA Portal
-    Schnittstellen: Jenkins, Jira, TMT, Zabbix, evt. Consul/Insight
+    Schnittstellen: Jenkins, Jira, TMT, Zabbix, Salt / Ansible, evt. Consul/Insight/Zookeeper
     Vorgehen: Fullstack Forward Engineered MDA
     Delivery Models: Docker, JAR, plain Node- / Spring-Threads
 
@@ -29,10 +29,11 @@ Karamdeep (-> Arbeiten und leuchten). Der Großonkel von Jenkins.
 - Aktueller Status:
     Datenmodel v0.9 mit Feedback aus RM, UM, KM, CI/CD, IQS erstellt
     MDA Flow angelegt und mehrfach durchlaufen
-    Wireframe Prototyp erstellt und erstes Feedback eingearbeitet
+    Wireframe Prototyp er- und vorstellt
+    Release Audition Prototyp aka ReleaseChecks eingeführt und verprobt
     Stories für JIRA vorbereitet 
     RelaseManager App aufgeräumt und erstes Styling durchgeführt
-    Package Übersichten für 0.5.3 und 0.5.6 erzeugt
+    Package Cockpit Übersichten für 0.5.3 und 0.5.6 erzeugt
 
 - NeXt Steps:
     Jirafizierung aller Aufgaben (Epic / Feature vs. Tag-Management)
