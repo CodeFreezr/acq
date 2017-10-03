@@ -28,8 +28,8 @@ Karamdeep (-> Arbeiten und leuchten). Der Großonkel von Jenkins.
 
 ### Aktueller Status:
   - Datenmodel v0.9 mit Feedback aus RM, UM, KM, CI/CD, IQS erstellt
-  - MDA Flow angelegt und mehrfach durchlaufen
-  - Wireframe Prototyp er- und vorstellt
+  - MDA Flow ausgearbeitet und mehrfach durchlaufen
+  - Wireframe Prototyp er- und vorgestellt
   - Release Audition Prototyp aka ReleaseChecks eingeführt und verprobt
   - Stories für JIRA vorbereitet 
   - RelaseManager App aufgeräumt und erstes Styling durchgeführt
