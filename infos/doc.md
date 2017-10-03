@@ -23,23 +23,25 @@
   - Sparx EA, Groovy, Python
 
 ### Aktueller Status:
-  - Datenmodel v0.9 mit Feedback aus RM, UM, KM, CI/CD, IQS erstellt
-  - MDA Flow ausgearbeitet und mehrfach durchlaufen
-  - Wireframe Prototyp er- und vorgestellt
-  - Release Audition Prototyp aka ReleaseChecks eingeführt und verprobt
-  - Stories für JIRA vorbereitet 
-  - RelaseManager App aufgeräumt und erstes Styling durchgeführt
-  - Package Cockpit Übersichten für 0.5.3 und 0.5.6 erzeugt
+  - [x] Datenmodel v0.9 mit Feedback aus RM, UM, KM, CI/CD, IQS erstellt
+  - [x] MDA Flow ausgearbeitet und mehrfach durchlaufen
+  - [x] Wireframe Prototyp er- und vorgestellt
+  - [x] Release Audition Prototyp aka ReleaseChecks eingeführt und verprobt
+  - [x] Stories für JIRA vorbereitet 
+  - [x] RelaseManager App aufgeräumt und erstes Styling durchgeführt
+  - [x] Package Cockpit Übersichten für 0.5.3 und 0.5.6 erzeugt
 
 ### NeXt Steps:
-  - Jirafizierung aller Aufgaben (Epic / Feature vs. Tag-Management)
-  - ReleaseBuilder Big Buzzer: One Button Delivery on ITU
-  - Package Cockpit für Release Dokumentation
-  - Datenbewirtschaftung für Stammdaten läuft
-  - Schnittstellen ausbauen
-  - KRMA Portal Beta
-  - Planung Token-Replacement
-  - Jenkins Jobs für Build, Test, Deployment, Start/Stop einrichten
+  - [] Jirafizierung aller Aufgaben (Epic / Feature vs. Tag-Management)
+  - [] RM_Web an DB
+  - [] Harmonisierung der Jenkins Jobs
+  - [] ReleaseBuilder Big Buzzer: One Button Delivery on ITU
+  - [] Package Cockpit für Release Dokumentation
+  - [] Datenbewirtschaftung für Stammdaten läuft
+  - [] Schnittstellen ausbauen
+  - [] KRMA Portal Beta
+  - [] Planung Token-Replacement
+  - [] Jenkins Jobs für Build, Test, Deployment, Start/Stop einrichten
   
   
 Docu: EA ERM > EA DDL Export > Customize > Generate > StartBE > StartFE
