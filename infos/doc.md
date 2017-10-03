@@ -1,12 +1,8 @@
-# Kurze Doku
+# Kurze Übersicht
 
-Docu: EA ERM > EA DDL Export > Customize > Generate > StartBE > StartFE
 
-Präsentieren:
 
-[K]onfiguration- & [R]elease[M]anagment [A]utomatisierung
-
-Karamdeep (-> Arbeiten und leuchten). Der Großonkel von Jenkins.
+KRMA = [K]onfiguration- & [R]elease[M]anagment [A]utomatisierung
 
 ### KRMA: Eine Initiative mit 5 Kernzielen: .
  1. ReleaseBuilder & Package Cockpit mittels Jenkins Orchestrierung
@@ -44,3 +40,10 @@ Karamdeep (-> Arbeiten und leuchten). Der Großonkel von Jenkins.
   - KRMA Portal Beta
   - Planung Token-Replacement
   - Jenkins Jobs für Build, Test, Deployment, Start/Stop einrichten
+  
+  
+Docu: EA ERM > EA DDL Export > Customize > Generate > StartBE > StartFE
+
+Präsentieren:
+Karamdeep (-> Arbeiten und leuchten). Der Großonkel von Jenkins.
+ 
