@@ -37,7 +37,7 @@
   - [ ] Harmonisierung der Jenkins Job- und Projektnamen
   - [ ] ReleaseBuilder Big Buzzer: One Button Delivery on ITU
   - [ ] Package Cockpit für Release Dokumentation
-  - [ ] Datenbewirtschaftung für Stammdaten läuft
+  - [ ] Datenbewirtschaftung für Stammdaten produktiv
   - [ ] Schnittstellen ausbauen
   - [ ] KRMA Portal Beta
   - [ ] Planung Token-Replacement
