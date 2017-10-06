@@ -1,0 +1,761 @@
+Microsoft Windows [Version 6.1.7601]
+Copyright (c) 2009 Microsoft Corporation. Alle Rechte vorbehalten.
+
+D:\dbt>cd acq
+
+D:\dbt\acq>dir
+ Datenträger in Laufwerk D: ist DATA
+ Volumeseriennummer: 50DC-D6F3
+
+ Verzeichnis von D:\dbt\acq
+
+01.10.2017  18:22    <DIR>          .
+01.10.2017  18:22    <DIR>          ..
+01.10.2017  18:23    <DIR>          celerio-angular-quickstart
+01.10.2017  18:21        21.915.018 celerio-angular-quickstart.7z
+01.10.2017  18:21    <DIR>          infos
+01.10.2017  18:21               185 README.md
+01.10.2017  18:21    <DIR>          resources
+01.10.2017  18:21               544 setup1Custom.cmd
+01.10.2017  18:21               654 setup2Adjust.cmd
+01.10.2017  18:21                73 startBackend.cmd
+01.10.2017  18:21               109 startFrontend.cmd
+               6 Datei(en),     21.916.583 Bytes
+               5 Verzeichnis(se), 66.514.104.320 Bytes frei
+
+D:\dbt\acq>setup1Custom.cmd
+        1 Datei(en) kopiert.
+        1 Datei(en) kopiert.
+[INFO] Scanning for projects...
+Downloading: https://repo.jenkins-ci.org/public/org/springframework/data/spring-data-releasetrain/Hopper-SR11/spring-data-releasetrain-Hopper-SR11.pom
+Downloaded: https://repo.jenkins-ci.org/public/org/springframework/data/spring-data-releasetrain/Hopper-SR11/spring-data-releasetrain-Hopper-SR11.pom (4.4 kB at 2.6 kB/s)
+Downloading: https://repo.jenkins-ci.org/public/org/springframework/data/build/spring-data-build/1.8.11.RELEASE/spring-data-build-1.8.11.RELEASE.pom
+Downloaded: https://repo.jenkins-ci.org/public/org/springframework/data/build/spring-data-build/1.8.11.RELEASE/spring-data-build-1.8.11.RELEASE.pom (5.4 kB at 9.3 kB/s)
+[WARNING]
+[WARNING] Some problems were encountered while building the effective model for com.jaxio:celerio-angular-quickstart:jar:1.0.0-SNAPSHOT
+[WARNING] 'parent.relativePath' of POM com.jaxio:celerio-angular-quickstart:1.0.0-SNAPSHOT (D:\dbt\acq\celerio-angular-quickstart\quickstart\pom.xml) points at com.jaxio:celerio-angular-quickstart-pom instead o
+f org.springframework.boot:spring-boot-starter-parent, please verify your project structure @ line 13, column 13
+[WARNING]
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING]
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING]
+[INFO]
+[INFO] ------------------------------------------------------------------------
+[INFO] Building celerio-angular-quickstart 1.0.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO]
+[INFO] --- sql-maven-plugin:1.5:execute (Create and initialize the database) @ celerio-angular-quickstart ---
+[INFO] Executing file: D:\dbt\acq\celerio-angular-quickstart\quickstart\..\quickstart-conf\01-create.sql
+0 rows affected
+0 rows affected
+0 rows affected
+0 rows affected
+0 rows affected
+0 rows affected
+0 rows affected
+0 rows affected
+0 rows affected
+0 rows affected
+0 rows affected
+0 rows affected
+0 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+1 rows affected
+[ERROR] Failed to execute:
+
+ RUNSCRIPT FROM '../../resources/sql/KRMA.sql'
+
+[ERROR] org.h2.jdbc.JdbcSQLException: Syntax Fehler in SQL Befehl "
+
+ALTER TABLE ""NOTE_ENTRY""
+ ADD CONSTRAINT ""FK_NOTE_ENTRY_NOTE""
+        FOREIGN KEY (""NOTE_ID"") REFERENCES  ()[*] ON DELETE NO ACTION ON UPDATE NO ACTION
+ "; erwartet "identifier"
+Syntax error in SQL statement "
+
+ALTER TABLE ""NOTE_ENTRY""
+ ADD CONSTRAINT ""FK_NOTE_ENTRY_NOTE""
+        FOREIGN KEY (""NOTE_ID"") REFERENCES  ()[*] ON DELETE NO ACTION ON UPDATE NO ACTION
+ "; expected "identifier"; SQL statement:
+
+
+ALTER TABLE `NOTE_ENTRY`
+ ADD CONSTRAINT `FK_NOTE_ENTRY_NOTE`
+        FOREIGN KEY (`NOTE_ID`) REFERENCES  () ON DELETE No Action ON UPDATE No Action
+ [42001-187]
+[INFO] 63 of 64 SQL statements executed successfully
+[INFO]
+[INFO] --- build-helper-maven-plugin:1.9.1:add-source (Adding generated java folder to build) @ celerio-angular-quickstart ---
+[INFO] Source directory: D:\dbt\acq\celerio-angular-quickstart\quickstart\src\main\java added.
+[INFO] Source directory: D:\dbt\acq\celerio-angular-quickstart\quickstart\src\main\generated-java added.
+[INFO]
+[INFO] --- build-helper-maven-plugin:1.9.1:add-test-source (Adding generated java test location to test build) @ celerio-angular-quickstart ---
+[INFO] Test Source directory: D:\dbt\acq\celerio-angular-quickstart\quickstart\src\test\java added.
+[INFO] Test Source directory: D:\dbt\acq\celerio-angular-quickstart\quickstart\src\test\generated-java added.
+[INFO]
+[INFO] --- dbmetadata-maven-plugin:4.0.23:extract-metadata (Extract the database schema.) @ celerio-angular-quickstart ---
+log4j:WARN No appenders could be found for logger (org.springframework.core.io.support.PathMatchingResourcePatternResolver).
+log4j:WARN Please initialize the log4j system properly.
+[INFO] Connecting to Database jdbcUrl=jdbc:h2:D:\dbt\acq\celerio-angular-quickstart\quickstart\target/db/angulardb;MVCC=TRUE;FILE_LOCK=NO
+[INFO] Connected OK
+[INFO] No table name pattern defined, using '%'
+[INFO] Working with 1 table name pattern(s)
+[INFO] Loading with catalog=[] schemaPattern=[] tableNamePattern=[%] types=[TABLE]
+[INFO] Table reversed: AUTHOR
+[INFO] Table reversed: BOOK
+[INFO] Table reversed: CHECK
+[INFO] Table reversed: CHECK_RESULT
+[INFO] Table reversed: COMPONENT
+[INFO] Table reversed: CONFIGURATION
+[INFO] Table reversed: DEPENDENCY
+[INFO] Table reversed: DEPLOYMENT
+[INFO] Table reversed: EDIT
+[INFO] Table reversed: EDITOR
+[INFO] Table reversed: ENVIRONMENT
+[INFO] Table reversed: HYPERLINK
+[INFO] Table reversed: NOTE
+[INFO] Table reversed: NOTE_ENTRY
+[INFO] Table reversed: PACKAGE
+[INFO] Table reversed: PASSPORT
+[INFO] Table reversed: PROJECT
+[INFO] Table reversed: RELEASE
+[INFO] Table reversed: RELEASE_PACKAGE
+[INFO] Table reversed: ROLE
+[INFO] Table reversed: USER
+[INFO] Table reversed: USER_ROLE
+[INFO] Extracting columns for table: AUTHOR
+[INFO] Extracting primary key for table: AUTHOR
+[INFO] Extracting imported keys for table: AUTHOR
+[INFO] Extracting only unique indexes for table: AUTHOR
+[INFO] Extracting columns for table: BOOK
+[INFO] Extracting primary key for table: BOOK
+[INFO] Extracting imported keys for table: BOOK
+[INFO] Extracting only unique indexes for table: BOOK
+[INFO] Extracting columns for table: CHECK
+[INFO] Extracting primary key for table: CHECK
+[INFO] Extracting imported keys for table: CHECK
+[INFO] Extracting only unique indexes for table: CHECK
+[INFO] Extracting columns for table: CHECK_RESULT
+[INFO] Extracting primary key for table: CHECK_RESULT
+[INFO] Extracting imported keys for table: CHECK_RESULT
+[INFO] Extracting only unique indexes for table: CHECK_RESULT
+[INFO] Extracting columns for table: COMPONENT
+[INFO] Extracting primary key for table: COMPONENT
+[INFO] Extracting imported keys for table: COMPONENT
+[INFO] Extracting only unique indexes for table: COMPONENT
+[INFO] Extracting columns for table: CONFIGURATION
+[INFO] Extracting primary key for table: CONFIGURATION
+[INFO] Extracting imported keys for table: CONFIGURATION
+[INFO] Extracting only unique indexes for table: CONFIGURATION
+[INFO] Extracting columns for table: DEPENDENCY
+[INFO] Extracting primary key for table: DEPENDENCY
+[INFO] Extracting imported keys for table: DEPENDENCY
+[INFO] Extracting only unique indexes for table: DEPENDENCY
+[INFO] Extracting columns for table: DEPLOYMENT
+[INFO] Extracting primary key for table: DEPLOYMENT
+[INFO] Extracting imported keys for table: DEPLOYMENT
+[INFO] Extracting only unique indexes for table: DEPLOYMENT
+[INFO] Extracting columns for table: EDIT
+[INFO] Extracting primary key for table: EDIT
+[INFO] Extracting imported keys for table: EDIT
+[INFO] Extracting only unique indexes for table: EDIT
+[INFO] Extracting columns for table: EDITOR
+[INFO] Extracting primary key for table: EDITOR
+[INFO] Extracting imported keys for table: EDITOR
+[INFO] Extracting only unique indexes for table: EDITOR
+[INFO] Extracting columns for table: ENVIRONMENT
+[INFO] Extracting primary key for table: ENVIRONMENT
+[INFO] Extracting imported keys for table: ENVIRONMENT
+[INFO] Extracting only unique indexes for table: ENVIRONMENT
+[INFO] Extracting columns for table: HYPERLINK
+[INFO] Extracting primary key for table: HYPERLINK
+[INFO] Extracting imported keys for table: HYPERLINK
+[INFO] Extracting only unique indexes for table: HYPERLINK
+[INFO] Extracting columns for table: NOTE
+[INFO] Extracting primary key for table: NOTE
+[INFO] Extracting imported keys for table: NOTE
+[INFO] Extracting only unique indexes for table: NOTE
+[INFO] Extracting columns for table: NOTE_ENTRY
+[INFO] Extracting primary key for table: NOTE_ENTRY
+[INFO] Extracting imported keys for table: NOTE_ENTRY
+[INFO] Extracting only unique indexes for table: NOTE_ENTRY
+[INFO] Extracting columns for table: PACKAGE
+[INFO] Extracting primary key for table: PACKAGE
+[INFO] Extracting imported keys for table: PACKAGE
+[INFO] Extracting only unique indexes for table: PACKAGE
+[INFO] Extracting columns for table: PASSPORT
+[INFO] Extracting primary key for table: PASSPORT
+[INFO] Extracting imported keys for table: PASSPORT
+[INFO] Extracting only unique indexes for table: PASSPORT
+[INFO] Extracting columns for table: PROJECT
+[INFO] Extracting primary key for table: PROJECT
+[INFO] Extracting imported keys for table: PROJECT
+[INFO] Extracting only unique indexes for table: PROJECT
+[INFO] Extracting columns for table: RELEASE
+[INFO] Extracting primary key for table: RELEASE
+[INFO] Extracting imported keys for table: RELEASE
+[INFO] Extracting only unique indexes for table: RELEASE
+[INFO] Extracting columns for table: RELEASE_PACKAGE
+[INFO] Extracting primary key for table: RELEASE_PACKAGE
+[INFO] Extracting imported keys for table: RELEASE_PACKAGE
+[INFO] Extracting only unique indexes for table: RELEASE_PACKAGE
+[INFO] Extracting columns for table: ROLE
+[INFO] Extracting primary key for table: ROLE
+[INFO] Extracting imported keys for table: ROLE
+[INFO] Extracting only unique indexes for table: ROLE
+[INFO] Extracting columns for table: USER
+[INFO] Extracting primary key for table: USER
+[INFO] Extracting imported keys for table: USER
+[INFO] Extracting only unique indexes for table: USER
+[INFO] Extracting columns for table: USER_ROLE
+[INFO] Extracting primary key for table: USER_ROLE
+[INFO] Extracting imported keys for table: USER_ROLE
+[INFO] Extracting only unique indexes for table: USER_ROLE
+[INFO] Write metadata.xml file to src\main\config\celerio-maven-plugin\metadata.xml
+[INFO]
+[INFO] --- celerio-maven-plugin:4.0.23:generate (Generates files using the extracted database schema.) @ celerio-angular-quickstart ---
+log4j:WARN No appenders could be found for logger (org.springframework.core.io.support.PathMatchingResourcePatternResolver).
+log4j:WARN Please initialize the log4j system properly.
+[INFO] Overriding configuration with ../quickstart-conf/celerio-template-packs.xml
+[INFO] Using outputDir: D:\dbt\acq\celerio-angular-quickstart\quickstart
+[INFO] [File Tracker Metadata not found: D:\dbt\acq\celerio-angular-quickstart\quickstart\.celerio\generated.xml]
+[INFO] Checking configuration consistency...
+[INFO] Processing enums...
+[INFO] Processing entities...
+[INFO] Adding entity User
+[INFO] Adding entity Passport
+[INFO] Adding entity Author
+[INFO] Adding entity Book
+[INFO] Adding entity Project
+[INFO] Adding entity Check
+[INFO] Adding entity CheckResult
+[INFO] Adding entity MyComponent
+[INFO] Adding entity Configuration
+[INFO] Adding entity Dependency
+[INFO] Adding entity Deployment
+[INFO] Adding entity Edit
+[INFO] Adding entity Editor
+[INFO] Adding entity Environment
+[INFO] Adding entity Hyperlink
+[INFO] Adding entity Note
+[INFO] Adding entity NoteEntry
+[INFO] Adding entity MyPackage
+[INFO] Adding entity Release
+[INFO] Adding entity ReleasePackage
+[INFO] Adding entity Role
+[INFO] Adding entity UserRole
+[INFO] Processing inheritance...
+[INFO] Processing uniques/pk/fk...
+[INFO] Force designed pk USER.ID fieldName to id
+[INFO] Force designed pk PASSPORT.ID fieldName to id
+[INFO] Force designed pk AUTHOR.ID fieldName to id
+[INFO] Force designed pk BOOK.ID fieldName to id
+[INFO] Force designed pk PROJECT.ID fieldName to id
+[INFO] Force designed pk CHECK.ID fieldName to id
+[INFO] Force designed pk CHECK_RESULT.ID fieldName to id
+[INFO] Force designed pk COMPONENT.ID fieldName to id
+[INFO] Force designed pk CONFIGURATION.ID fieldName to id
+[INFO] Force designed pk DEPENDENCY.ID fieldName to id
+[INFO] Force designed pk DEPLOYMENT.ID fieldName to id
+[INFO] Force designed pk EDIT.ID fieldName to id
+[INFO] Force designed pk EDITOR.ID fieldName to id
+[INFO] Force designed pk ENVIRONMENT.ID fieldName to id
+[INFO] Force designed pk HYPERLINK.ID fieldName to id
+[INFO] Force designed pk NOTE.ID fieldName to id
+[INFO] Force designed pk NOTE_ENTRY.ID fieldName to id
+[INFO] Force designed pk PACKAGE.ID fieldName to id
+[INFO] Force designed pk RELEASE.ID fieldName to id
+[INFO] Force designed pk RELEASE_PACKAGE.ID fieldName to id
+[INFO] Force designed pk ROLE.ID fieldName to id
+[INFO] Processing relations...
+[INFO] Entity UserRole is a middle entity
+[INFO] middle table: USER_ROLE 2 0
+[INFO] Processing business keys...
+[INFO] User[login]: setting business key by convention (first unique property)
+[INFO] Passport: no business key configured for entity
+[INFO] Author: no business key configured for entity
+[INFO] Book: no business key configured for entity
+[INFO] Project: no business key configured for entity
+[INFO] Check: no business key configured for entity
+[INFO] CheckResult: no business key configured for entity
+[INFO] MyComponent: no business key configured for entity
+[INFO] Configuration: no business key configured for entity
+[INFO] Dependency: no business key configured for entity
+[INFO] Deployment: no business key configured for entity
+[INFO] Edit: no business key configured for entity
+[INFO] Editor: no business key configured for entity
+[INFO] Environment[myShort]: setting business key by convention (first unique property)
+[INFO] Hyperlink: no business key configured for entity
+[INFO] Note: no business key configured for entity
+[INFO] NoteEntry: no business key configured for entity
+[INFO] MyPackage: no business key configured for entity
+[INFO] Release[name]: setting business key by convention (first unique property)
+[INFO] ReleasePackage: no business key configured for entity
+[INFO] Role[roleName]: setting business key by convention (first unique property)
+[INFO] UserRole: no business key configured for entity
+[INFO] Processing global validation...
+[INFO] Applying conventions...
+[INFO] Loading Celerio SPIs...
+[INFO] Load EntitySpi: jpa => com.jaxio.celerio.model.support.jpa.JpaEntity
+[INFO] Load EntitySpi: custom => com.jaxio.celerio.model.support.custom.CustomEntity
+[INFO] Load EntitySpi: search => com.jaxio.celerio.model.support.search.SearchEntity
+[INFO] Load EntitySpi: springMvc => com.jaxio.celerio.model.support.springmvc.SpringMVCEntity
+[INFO] Load AttributeSpi: custom => com.jaxio.celerio.model.support.custom.CustomAttribute
+[INFO] Load AttributeSpi: formatter => com.jaxio.celerio.model.support.formatter.FormatterAttribute
+[INFO] Load AttributeSpi: search => com.jaxio.celerio.model.support.search.SearchAttribute
+[INFO] Load AttributeSpi: validation => com.jaxio.celerio.model.support.validation.ValidationAttribute
+[INFO] Load AttributeSpi: springMvc => com.jaxio.celerio.model.support.springmvc.SpringMVCAttribute
+[INFO] Load AttributeSpi: jsf => com.jaxio.celerio.model.support.jsf.JsfAttribute
+[INFO] Load AttributeSpi: h2 => com.jaxio.celerio.model.support.h2.H2Attribute
+[INFO] Load AttributeSpi: jQuery => com.jaxio.celerio.model.support.jquery.JQueryAttribute
+[INFO] Load AttributeSpi: values => com.jaxio.celerio.model.support.ValuesAttribute
+[INFO] Load RelationSpi: validation => com.jaxio.celerio.model.support.validation.ValidationRelation
+[INFO] Load RelationSpi: jpa => com.jaxio.celerio.model.support.jpa.JpaToOneRelation
+[INFO] Load RelationSpi: jpa => com.jaxio.celerio.model.support.jpa.JpaOneToManyRelation
+[INFO] Load RelationSpi: jpa => com.jaxio.celerio.model.support.jpa.JpaManyToManyRelation
+[INFO] Load RelationSpi: jpa => com.jaxio.celerio.model.support.jpa.JpaIntermediateManyToOneRelation
+[INFO] Load RelationSpi: jpa => com.jaxio.celerio.model.support.jpa.JpaIntermediateOneToManyRelation
+[INFO] No active module
+[INFO] -----------------------------------------------------------------------
+[INFO] Working with 1 templates pack.
+[INFO] . pack-angular (69 resources)
+[INFO]         Configuration found
+[INFO] -----------------------------------------------------------------------
+[INFO] Template Pack (bootstrap) pack-angular
+[INFO] [pack-angular][generate] src\main\config\celerio-maven-plugin\celerio-template-packs.xml
+[INFO] [pack-angular][generate in collision folder] target\celerio-maven-plugin\collisions\pom.xml
+[INFO] -----------------------------------------------------------------------
+[INFO] Template Pack pack-angular
+[INFO] [pack-angular][generate] WELCOME.TXT
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\Application.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\audit\AuditContextHolder.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\config\CustomLocalDateDeserializer.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\config\CustomLocalDateSerializer.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\config\CustomLocalDateTimeDeserializer.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\config\CustomLocalDateTimeSerializer.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\config\JacksonConfiguration.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\config\SecurityConfiguration.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\config\SwaggerConfiguration.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Identifiable.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\IdentifiableHashBuilder.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\support\LazyLoadEvent.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\support\PageRequestByExample.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\support\PageResponse.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\SecurityResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\support\AutoCompleteQuery.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\security\AjaxAuthenticationFailureHandler.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\security\AjaxAuthenticationSuccessHandler.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\security\AlwaysSendUnauthorized401AuthenticationEntryPoint.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\security\UserContext.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\security\UserDetailsServiceImpl.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\security\UserWithId.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\validation\FixedLength.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\validation\impl\FixedLengthValidator.java
+[INFO] [pack-angular][generate] src\main\resources\application.yml
+[INFO] [pack-angular][generate] src\test\generated-java\com\mycompany\myapp\ApplicationTests.java
+[INFO] [pack-angular][generate] web\src\app\app.component.spec.ts
+[INFO] [pack-angular][generate] web\src\app\app.component.ts
+[INFO] [pack-angular][generate] web\src\app\app.module.ts
+[INFO] [pack-angular][generate] web\src\app\app.routes.ts
+[INFO] [pack-angular][generate] web\src\app\home.component.html
+[INFO] [pack-angular][generate] web\src\app\home.component.ts
+[INFO] [pack-angular][generate] web\src\app\service\auth.service.ts
+[INFO] [pack-angular][generate] web\src\app\service\message.service.ts
+[INFO] [pack-angular][generate] web\src\app\support\email.validator.ts
+[INFO] [pack-angular][generate] web\src\app\support\paging.ts
+[INFO] Date Mapping match for USER.CREATION_DATE jdbcType=TIMESTAMP => DateMapping: mappedType=M_INSTANT columnJdbcType=TIMESTAMP columnNameRegExp=null
+[INFO] Date Mapping match for USER.LAST_MODIFICATION_DATE jdbcType=TIMESTAMP => DateMapping: mappedType=M_INSTANT columnJdbcType=TIMESTAMP columnNameRegExp=null
+[INFO] User: assumed by convention to accept audit events
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\User.java
+[INFO] Date Mapping match for PASSPORT.EXPIRATION_DATE jdbcType=DATE => DateMapping: mappedType=M_LOCALDATE columnJdbcType=DATE columnNameRegExp=null
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Passport.java
+[INFO] Date Mapping match for AUTHOR.BIRTH_DATE jdbcType=DATE => DateMapping: mappedType=M_LOCALDATE columnJdbcType=DATE columnNameRegExp=null
+[INFO] Date Mapping match for AUTHOR.BIRTH_DATE_TIME jdbcType=TIMESTAMP => DateMapping: mappedType=M_INSTANT columnJdbcType=TIMESTAMP columnNameRegExp=null
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Author.java
+[INFO] Date Mapping match for BOOK.PUBLICATION_DATE jdbcType=DATE => DateMapping: mappedType=M_LOCALDATE columnJdbcType=DATE columnNameRegExp=null
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Book.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Project.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Check.java
+[INFO] Applying boolean convention to 'CheckResult.result'. If needed, you can force the mapping to another type using the mappedType attribute in columnConfig.
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\CheckResult.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\MyComponent.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Configuration.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Dependency.java
+[INFO] Date Mapping match for DEPLOYMENT.DUE jdbcType=TIMESTAMP => DateMapping: mappedType=M_INSTANT columnJdbcType=TIMESTAMP columnNameRegExp=null
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Deployment.java
+[INFO] Date Mapping match for EDIT.FIRST_EDIT jdbcType=TIMESTAMP => DateMapping: mappedType=M_INSTANT columnJdbcType=TIMESTAMP columnNameRegExp=null
+[INFO] Date Mapping match for EDIT.LAST_EDIT jdbcType=TIMESTAMP => DateMapping: mappedType=M_INSTANT columnJdbcType=TIMESTAMP columnNameRegExp=null
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Edit.java
+[INFO] Date Mapping match for EDITOR.BIRTHDAY jdbcType=TIMESTAMP => DateMapping: mappedType=M_INSTANT columnJdbcType=TIMESTAMP columnNameRegExp=null
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Editor.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Environment.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Hyperlink.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Note.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\NoteEntry.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\MyPackage.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Release.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\ReleasePackage.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Role.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\User_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Passport_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Author_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Book_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Project_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Check_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\CheckResult_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\MyComponent_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Configuration_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Dependency_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Deployment_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Edit_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Editor_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Environment_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Hyperlink_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Note_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\NoteEntry_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\MyPackage_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Release_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\ReleasePackage_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Role_.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\UserDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\PassportDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\AuthorDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\BookDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\ProjectDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\CheckDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\CheckResultDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\MyComponentDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\ConfigurationDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\DependencyDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\DeploymentDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\EditDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\EditorDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\EnvironmentDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\HyperlinkDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\NoteDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\NoteEntryDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\MyPackageDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\ReleaseDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\ReleasePackageDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\RoleDTO.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\UserDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\PassportDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\AuthorDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\BookDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\ProjectDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\CheckDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\CheckResultDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\MyComponentDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\ConfigurationDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\DependencyDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\DeploymentDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\EditDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\EditorDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\EnvironmentDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\HyperlinkDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\NoteDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\NoteEntryDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\MyPackageDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\ReleaseDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\ReleasePackageDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\dto\RoleDTOService.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\UserRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\PassportRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\AuthorRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\BookRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\ProjectRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\CheckRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\CheckResultRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\MyComponentRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\ConfigurationRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\DependencyRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\DeploymentRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\EditRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\EditorRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\EnvironmentRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\HyperlinkRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\NoteRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\NoteEntryRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\MyPackageRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\ReleaseRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\ReleasePackageRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\repository\RoleRepository.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\UserResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\PassportResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\AuthorResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\BookResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\ProjectResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\CheckResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\CheckResultResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\MyComponentResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\ConfigurationResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\DependencyResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\DeploymentResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\EditResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\EditorResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\EnvironmentResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\HyperlinkResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\NoteResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\NoteEntryResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\MyPackageResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\ReleaseResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\ReleasePackageResource.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\rest\RoleResource.java
+[INFO] [pack-angular][generate] web\src\app\entities\user\user-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\passport\passport-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\author\author-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\book\book-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\project\project-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\check\check-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\checkResult\checkResult-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\myComponent\myComponent-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\configuration\configuration-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\dependency\dependency-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\deployment\deployment-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\edit\edit-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\editor\editor-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\environment\environment-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\hyperlink\hyperlink-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\note\note-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\noteEntry\noteEntry-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\myPackage\myPackage-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\release\release-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\releasePackage\releasePackage-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\role\role-auto-complete.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\user\user-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\passport\passport-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\author\author-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\book\book-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\project\project-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\check\check-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\checkResult\checkResult-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\myComponent\myComponent-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\configuration\configuration-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\dependency\dependency-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\deployment\deployment-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\edit\edit-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\editor\editor-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\environment\environment-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\hyperlink\hyperlink-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\note\note-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\noteEntry\noteEntry-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\myPackage\myPackage-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\release\release-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\releasePackage\releasePackage-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\role\role-detail.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\user\user-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\passport\passport-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\author\author-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\book\book-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\project\project-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\check\check-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\checkResult\checkResult-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\myComponent\myComponent-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\configuration\configuration-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\dependency\dependency-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\deployment\deployment-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\edit\edit-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\editor\editor-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\environment\environment-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\hyperlink\hyperlink-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\note\note-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\noteEntry\noteEntry-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\myPackage\myPackage-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\release\release-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\releasePackage\releasePackage-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\role\role-detail.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\user\user-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\passport\passport-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\author\author-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\book\book-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\project\project-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\check\check-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\checkResult\checkResult-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\myComponent\myComponent-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\configuration\configuration-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\dependency\dependency-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\deployment\deployment-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\edit\edit-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\editor\editor-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\environment\environment-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\hyperlink\hyperlink-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\note\note-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\noteEntry\noteEntry-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\myPackage\myPackage-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\release\release-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\releasePackage\releasePackage-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\role\role-line.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\user\user-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\passport\passport-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\author\author-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\book\book-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\project\project-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\check\check-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\checkResult\checkResult-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\myComponent\myComponent-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\configuration\configuration-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\dependency\dependency-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\deployment\deployment-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\edit\edit-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\editor\editor-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\environment\environment-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\hyperlink\hyperlink-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\note\note-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\noteEntry\noteEntry-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\myPackage\myPackage-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\release\release-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\releasePackage\releasePackage-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\role\role-list.component.html
+[INFO] [pack-angular][generate] web\src\app\entities\user\user-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\passport\passport-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\author\author-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\book\book-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\project\project-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\check\check-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\checkResult\checkResult-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\myComponent\myComponent-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\configuration\configuration-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\dependency\dependency-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\deployment\deployment-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\edit\edit-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\editor\editor-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\environment\environment-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\hyperlink\hyperlink-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\note\note-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\noteEntry\noteEntry-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\myPackage\myPackage-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\release\release-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\releasePackage\releasePackage-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\role\role-list.component.ts
+[INFO] [pack-angular][generate] web\src\app\entities\user\user.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\passport\passport.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\author\author.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\book\book.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\project\project.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\check\check.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\checkResult\checkResult.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\myComponent\myComponent.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\configuration\configuration.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\dependency\dependency.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\deployment\deployment.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\edit\edit.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\editor\editor.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\environment\environment.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\hyperlink\hyperlink.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\note\note.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\noteEntry\noteEntry.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\myPackage\myPackage.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\release\release.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\releasePackage\releasePackage.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\role\role.service.ts
+[INFO] [pack-angular][generate] web\src\app\entities\user\user.ts
+[INFO] [pack-angular][generate] web\src\app\entities\passport\passport.ts
+[INFO] [pack-angular][generate] web\src\app\entities\author\author.ts
+[INFO] [pack-angular][generate] web\src\app\entities\book\book.ts
+[INFO] [pack-angular][generate] web\src\app\entities\project\project.ts
+[INFO] [pack-angular][generate] web\src\app\entities\check\check.ts
+[INFO] [pack-angular][generate] web\src\app\entities\checkResult\checkResult.ts
+[INFO] [pack-angular][generate] web\src\app\entities\myComponent\myComponent.ts
+[INFO] [pack-angular][generate] web\src\app\entities\configuration\configuration.ts
+[INFO] [pack-angular][generate] web\src\app\entities\dependency\dependency.ts
+[INFO] [pack-angular][generate] web\src\app\entities\deployment\deployment.ts
+[INFO] [pack-angular][generate] web\src\app\entities\edit\edit.ts
+[INFO] [pack-angular][generate] web\src\app\entities\editor\editor.ts
+[INFO] [pack-angular][generate] web\src\app\entities\environment\environment.ts
+[INFO] [pack-angular][generate] web\src\app\entities\hyperlink\hyperlink.ts
+[INFO] [pack-angular][generate] web\src\app\entities\note\note.ts
+[INFO] [pack-angular][generate] web\src\app\entities\noteEntry\noteEntry.ts
+[INFO] [pack-angular][generate] web\src\app\entities\myPackage\myPackage.ts
+[INFO] [pack-angular][generate] web\src\app\entities\release\release.ts
+[INFO] [pack-angular][generate] web\src\app\entities\releasePackage\releasePackage.ts
+[INFO] [pack-angular][generate] web\src\app\entities\role\role.ts
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\Civility.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\CountryCode.java
+[INFO] [pack-angular][generate] src\main\generated-java\com\mycompany\myapp\domain\CountryCodeConverter.java
+[INFO] [pack-angular][generate] src\main\resources\static\img\angular-icon.svg
+[INFO] [pack-angular][generate] src\main\resources\static\img\jaxio.gif
+[INFO] [pack-angular][generate] src\main\resources\static\img\loading.svg
+[INFO] [pack-angular][generate] src\main\resources\static\img\primeng.svg
+[INFO] [pack-angular][generate] src\main\resources\static\img\springboot.png
+[INFO] [pack-angular][generate] src\main\resources\static\img\springdata.gif
+[INFO] [pack-angular][generate] src\main\resources\static\img\typescript.png
+[INFO] [pack-angular][generate] web\proxy.conf.json
+[INFO] [pack-angular][generate] web\src\app\support\confirm-delete-dialog.component.ts
+[INFO] [pack-angular][generate] web\src\styles.css
+[INFO] -----------------------------------------------------------------------
+[INFO]         ______         __                  _
+[INFO]       .' ___  |       [  |                (_)
+[INFO]      / .'   \_| .---.  | | .---.  _ .--.  __   .--.
+[INFO]      | |       / /__\\ | |/ /__\\[ `/'`\][  |/ .'`\ \
+[INFO]      \ `.___.'\| \__., | || \__., | |     | || \__. |
+[INFO]       `.____ .' '.__.'[___]'.__.'[___]   [___]'.__.'  v4.0.23
+[INFO]
+[INFO]        Branding file: D:\Users\DetlefBurkhardt/.celerio/branding.properties
+[INFO]        Documentation: http://www.jaxio.com/documentation/celerio/
+[INFO]        (c) 2005-2017 Jaxio, http://www.jaxio.com
+[INFO] -----------------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 43.276 s
+[INFO] Finished at: 2017-10-01T19:02:05+02:00
+[INFO] Final Memory: 31M/419M
+[INFO] ------------------------------------------------------------------------
+**********************************************************************************************
+change port to 8181 in /quickstart/web/proxy.conf.json
+change port to 8181 in /quickstart/src/main/resources/application.yml
+
+D:\dbt\acq>/* sets a h2 db into mysql mode */
+Der Befehl "/*" ist entweder falsch geschrieben oder
+konnte nicht gefunden werden.
+
+D:\dbt\acq>

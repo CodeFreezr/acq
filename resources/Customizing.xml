@@ -4,6 +4,15 @@
             <replace>	`ID` DECIMAL(10,0) NOT NULL COMMENT 'GENERATED AS IDENTITY,',</replace>
             <with>	`ID` int not null IDENTITY,</with>
         </repeat>
+        <repeat file="sql\KRMA.SQL">
+            <replace>SET FOREIGN_KEY_CHECKS=0 </replace>
+            <with>
+/* sets a h2 db into mysql mode */
+SET MODE MySQL;
+
+SET FOREIGN_KEY_CHECKS=0 
+            </with>
+        </repeat>        
     </repeats>
     <sets>
         <set file="\img\*.*">
