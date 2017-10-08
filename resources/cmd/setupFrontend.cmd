@@ -1,6 +1,6 @@
 @echo off
 pushd .
-cd celerio-angular-quickstart/quickstart
+cd ../../celerio-angular-quickstart/quickstart
 call ng new web
 rm web/src/app/app.module.ts web/src/app/app.component.* web/src/styles.css
 cd web
