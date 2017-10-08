@@ -1,6 +1,32 @@
->> H2 im Hybrid-Mode !!!
->> H2 beim beenden daten exportieren
-H2 Vor dem generieren (setup1) daten importieren
+(1) >> H2 im Hybrid-Mode !!!
+
+(2) >> H2 daten exportieren
+java org.h2.tools.Script -url jdbc:h2:~/test -user sa -script test.zip -options compression zip
+java org.h2.tools.Script -url jdbc:h2:~/test -user sa -script krma-db.zip -options compression zip
+
+(3) >> H2 daten importieren
+java org.h2.tools.RunScript -url jdbc:h2:~/test -user sa -script test.zip -options compression zip
+
+(4) Audit by Convention:
+CREATE TABLE AUDIT (
+    id                 int not null IDENTITY,
+    author             varchar(256),
+    event              varchar(256),
+    event_date         timestamp,
+    string_attribute_1 varchar(256),
+    string_attribute_2 varchar(256),
+    string_attribute_3 varchar(256),
+    primary key (id)
+);
+
+(5) Inheritance per Join, Example:
+Component > Package
+Note > NoteEntry
+Check > CheckResults
+
+(6) ManyToMany Relations
+Package <> Release_Packages <> Release
+Release <> Deployment <> Environment
 
 Tooltips aus Kommentar-Spalte
 Startseite als Portal
@@ -10,7 +36,7 @@ Create Customisation Processor (read xml, process xml for eg. with antbuilder)
 Data: Components Complete Next,Team,App,Component,Service
 Data: nxComponent, nxPackage, 
 Add Technology-Stack: Velocity, Nodes, Maven, Webpack, SQL-Database 
-
+FIX: Rest Service Error (via JAR)
 Try Electron
 
 

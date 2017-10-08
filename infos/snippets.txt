@@ -1,3 +1,7 @@
+Update:
+>>> Old Empty Constraints in Note und Note_Entry
+
+
 jdbc:h2:D:\dbt\03\celerio\celerio-angular-quickstart\quickstart\target\db\angulardb;MVCC=TRUE;FILE_LOCK=NO
 
 jdbc:h2:D:\acq\celerio-angular-quickstart\quickstart\target\db\angulardb;MVCC=TRUE;FILE_LOCK=NO
