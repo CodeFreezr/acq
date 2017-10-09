@@ -38,5 +38,8 @@ Data: nxComponent, nxPackage,
 Add Technology-Stack: Velocity, Nodes, Maven, Webpack, SQL-Database 
 FIX: Rest Service Error (via JAR)
 Try Electron
+RB/PC: Reihenfolge der Jobs in den Listboxen
+RB/PC: Datum des Build-RunScript
+RB/PC: Speichern in DB (lernen via Swagger)
 
 
