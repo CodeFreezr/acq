@@ -2,6 +2,13 @@ Update:
 >>> Old Empty Constraints in Note und Note_Entry
 
 
+http://172.23.240.1:8082/login.jsp?jsessionid=4be942b8b02df2dfeb1748700f784dfa
+jdbc:h2:C:\dbt\h2test
+
+
+jdbc:h2:D:\acq\celerio-angular-quickstart\quickstart\target\db\angulardb;MVCC=TRUE;FILE_LOCK=NO
+
+
 jdbc:h2:D:\dbt\03\celerio\celerio-angular-quickstart\quickstart\target\db\angulardb;MVCC=TRUE;FILE_LOCK=NO
 
 jdbc:h2:D:\acq\celerio-angular-quickstart\quickstart\target\db\angulardb;MVCC=TRUE;FILE_LOCK=NO

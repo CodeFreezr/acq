@@ -168,6 +168,18 @@ INSERT INTO BOOK(id, title, summary, author_id, publication_date, best_seller, p
 
 INSERT INTO PROJECT(id, name, url, author_id, open_source) VALUES (-1, 'PrimeNG', 'http://www.primefaces.org/primeng/', -1, true);
 
+--Celerio Convention for general purpose audit logging:
+CREATE TABLE AUDIT (
+    id                 int not null IDENTITY,
+    author             varchar(256),
+    event              varchar(256),
+    event_date         timestamp,
+    string_attribute_1 varchar(256),
+    string_attribute_2 varchar(256),
+    string_attribute_3 varchar(256),
+    primary key (id)
+);
+
 --Setuo KRMA Entities:
 RUNSCRIPT FROM '../../resources/sql/KRMA.sql';
 
