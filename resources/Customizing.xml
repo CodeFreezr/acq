@@ -10,7 +10,7 @@
 /* sets a h2 db into mysql mode */
 SET MODE MySQL;
 
-SET FOREIGN_KEY_CHECKS=0 
+SET FOREIGN_KEY_CHECKS=0
             </with>
         </repeat>        
     </repeats>

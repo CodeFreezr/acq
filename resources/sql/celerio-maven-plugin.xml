@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <celerio xmlns="http://www.jaxio.com/schema/celerio" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://www.jaxio.com/schema/celerio ./celerio.xsd">
-
-
     <configuration rootPackage="com.mycompany.myapp" applicationName="krmaPortal">
         <!-- Which tables are used for generation -->
         <tables>
@@ -166,8 +164,8 @@
                     <!-- will generate the one to many association on the Environment side -->
                     <oneToManyConfig elementVar="hyperlink" var="hyperlink" orphanRemoval="true"/>
                   </columnConfig>
-                  <columnConfig columnName="package_id" searchField="false" displayOrder="8">
-                    <!-- will generate the one to many association on the Package side -->
+                  <columnConfig columnName="artifact_id" searchField="false" displayOrder="8">
+                    <!-- will generate the one to many association on the Artifact side -->
                     <oneToManyConfig elementVar="hyperlink" var="hyperlink" orphanRemoval="true"/>
                   </columnConfig>
                   <columnConfig columnName="release_id" searchField="false" displayOrder="9">
@@ -192,9 +190,9 @@
             </columnConfigs>
         </entityConfig>
 
-        <entityConfig tableName="PACKAGE" entityName="Package">
+        <entityConfig tableName="ARTIFACT" entityName="Artifact">
             <columnConfigs>
-                <columnConfig columnName="TYPE" sharedEnumName="PackageType"/>
+                <columnConfig columnName="TYPE" sharedEnumName="ArtifactType"/>
             </columnConfigs>
         </entityConfig>
 
@@ -252,7 +250,7 @@
                 <enumValue value="na"><labels><label value="Nicht Verfügbar"/></labels></enumValue>
             </enumValues>
         </sharedEnumConfig>
-        <sharedEnumConfig name="PackageType" type="STRING">
+        <sharedEnumConfig name="ArtifactType" type="STRING">
             <enumValues>
                 <enumValue value="NPM"><labels><label value="NPM"/></labels></enumValue>
                 <enumValue value="RPM"><labels><label value="RPM"/></labels></enumValue>

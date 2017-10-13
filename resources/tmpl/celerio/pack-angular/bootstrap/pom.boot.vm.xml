@@ -43,7 +43,9 @@ $output.file("pom.xml")##
         <jdbc.version>1.4.187</jdbc.version>
 
         <jdbc.driver>org.h2.Driver</jdbc.driver>
-        <jdbc.url>jdbc:h2:${d}{project.build.directory}/db/angular-lab;MVCC=TRUE;FILE_LOCK=NO</jdbc.url>
+
+        <jdbc.url>jdbc:h2:D:/KRMA/db/angulardb;MVCC=TRUE;FILE_LOCK=NO</jdbc.url>        
+        <!-- <jdbc.url>jdbc:h2:${d}{project.build.directory}/db/angular-lab;MVCC=TRUE;FILE_LOCK=NO</jdbc.url> -->
         <jdbc.user>root</jdbc.user>
         <jdbc.password>manager</jdbc.password>
         <jdbc.schema></jdbc.schema>
